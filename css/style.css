@@ -55,7 +55,8 @@ body{
      
 }
 .options{
-    display: none;
+
+    /* display: none; */
     width: 30vw;
     position: relative;
     margin-top: 10vh;

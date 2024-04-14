@@ -31,21 +31,21 @@
         </div>
         <div class="options">
             <div class="firstlineoptions">
-                <img src="./assets/stone.png" class="playbtns">
+                <img src="./assets/stone.png" class="playbtns" onclick="results(0)">
                 <img src="./assets/straightline.png" id="straightline">
-                <img src="./assets/scissors.png" class="playbtns">
+                <img src="./assets/scissors.png" class="playbtns" onclick="results(1)">
 
             </div>
             <div class="secondlineoptions">
                 <img src="./assets/rightdiagonal.png" id="leftdiagonal">
-                <img src="./assets/paper.png" class="playbtns">
+                <img src="./assets/paper.png" class="playbtns" onclick="results(2)">
                 <img src="./assets/leftdiagonal.png" id="rightdiagonal">
             </div>
         </div>
         <div class="results">
             <div class="userchoice">
                 <div>YOU PICKED</div>
-                <div class="chosenimg">
+                <div class="chosenimg" id="ch1">
                     <span style="--i:0"></span>
                     <span style="--i:1"></span>
                     <span style="--i:2"></span>
@@ -56,11 +56,11 @@
             <div class="resultdisplay">
                 <h1 style="margin: 1vh;">YOU WIN</h1>
                 <h3 style="margin: 1vh;">AGAINST PC</h3>
-                <button>PLAY AGAIN</button>
+                <button id="pg1" onclick="playagain()">PLAY AGAIN</button>
             </div>
             <div class="pcchoice">
                 <div>PC PICKED</div>
-                <div class="chosenimg">
+                <div class="chosenimg" id="ch2">
                     <span style="--i:0"></span>
                     <span style="--i:1"></span>
                     <span style="--i:2"></span>
@@ -70,8 +70,8 @@
             </div>
         </div>
     </div>
-
+    <script src="./js/script.js"></script>
 </body>
-<script src="./js/script.js"></script>
+
 
 </html>
