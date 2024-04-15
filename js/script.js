@@ -10,6 +10,10 @@ const pcscoredisp=document.querySelector('#pcscore > h1');
     const againststatus=document.querySelector('.resultdisplay>h3');
     const ch1=document.getElementById('ch1');
     const ch2=document.getElementById('ch2');
+    const imgcross=document.getElementsByClassName('imgcross')
+    const next=document.getElementById('next');
+    const container =document.getElementsByClassName('container');
+    const celeb=document.getElementsByClassName('celebration');
 function results(userchoice){
     //0 for stone
     //1 for scissors
@@ -70,6 +74,7 @@ function changedisplay(userchoice,pcchoice,matchresult){
         userscoredisp.textContent=userscore;
         ch1.style.background='green';
         againststatus.style.visibility='visible';
+        next.style.display='block';
     }
     else if(matchresult==2){
         winstatus.textContent='YOU LOST'
@@ -90,5 +95,22 @@ function playagain(){
     ch2.style.background='none';
     result[0].style.display='none';
     options[0].style.display='block';
+    next.style.display='none';
    
+}
+function rulepopup(){
+ imgcross[0].style.display='block';
+}
+function rulepopdown(){
+    imgcross[0].style.display='none';
+}
+function celebration(){
+ container[0].style.display='none';
+ celeb[0].style.display='flex';
+ next.style.display='none';
+}
+function playagain2(){
+    container[0].style.display='flex';
+ celeb[0].style.display='none';
+    playagain();
 }
